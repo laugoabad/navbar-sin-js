@@ -42,10 +42,9 @@ body {
         transform: rotate(225deg);
         margin: 0;
         background: rgba(0, 0, 0, 0.4); }
-    .menu-wrap .toggler:checked ~ .navbar ul.menu-list {
-      opacity: 1; }
-      .menu-wrap .toggler:checked ~ .navbar ul.menu-list li {
-        flex-direction: row; }
+    .menu-wrap .toggler:checked ~ ul.menu-list {
+      opacity: 1;
+      flex-direction: column; }
   .menu-wrap .hamburguer {
     position: absolute;
     z-index: 1;
