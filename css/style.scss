@@ -31,7 +31,7 @@ body {
     box-shadow: 0rem 0rem 1rem grey;
     border-bottom: 1px solid #e6e6e6;
     ul.menu-list {
-        visibility: hidden;
+        opacity: 0;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -90,7 +90,7 @@ body {
 }
 
 .menu-wrap {
-    visibility: visible;
+    opacity: 1;
     position: absolute;
     right: 10rem;
     display: flex;
@@ -105,23 +105,23 @@ body {
         height: 5rem;
         opacity: 0;
         &:checked + .hamburguer .linea {
-           background:rgba(0,0,0,0);
+            background: rgba(0, 0, 0, 0);
             &:before {
-               transform: rotate(135deg);
-               margin: 0;
-               background:rgba(0,0,0,0.4);
+                transform: rotate(135deg);
+                margin: 0;
+                background: rgba(0, 0, 0, 0.4);
             }
             &:after {
                 transform: rotate(225deg);
                 margin: 0;
-                background:rgba(0,0,0,0.4);
+                background: rgba(0, 0, 0, 0.4);
             }
         }
-        &:checked > ul.menu-list {
-             visibility: visible;
-             li {
-                 flex-direction: row;
-             }
+        &:checked ~ .navbar ul.menu-list {
+            opacity: 1;
+            li {
+                flex-direction: row;
+            }
         }
     }
     .hamburguer {
@@ -134,7 +134,7 @@ body {
         .linea,
         .linea:before,
         .linea:after {
-            content: '';
+            content: "";
             position: absolute;
             width: 3rem;
             height: 0.3rem;
@@ -142,14 +142,14 @@ body {
         }
         .linea:before {
             background-color: nth($square-bg-color, 5);
-           margin-top: -1rem;
+            margin-top: -1rem;
         }
         .linea {
             background-color: nth($square-bg-color, 4);
         }
         .linea:after {
             background-color: nth($square-bg-color, 8);
-        margin-top: 1rem;
+            margin-top: 1rem;
         }
     }
 }
@@ -158,24 +158,24 @@ body {
 @media (min-width: 1200px) {
     .navbar {
         .menu-wrap {
-            visibility: hidden;
+            opacity: 0;
         }
         ul.menu-list {
-            visibility: visible;
+            opacity: 1;
 
-        // display: flex;
-        // justify-content: center;
-        // align-items: center;
-        // list-style-type: none;
-        li {
-            position: relative;
-            display: flex;
-            // flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 0rem 1.2rem;
-            border-right: 1px solid #e6e6e6;
-    }
+            // display: flex;
+            // justify-content: center;
+            // align-items: center;
+            // list-style-type: none;
+            li {
+                position: relative;
+                display: flex;
+                // flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 0rem 1.2rem;
+                border-right: 1px solid #e6e6e6;
+            }
         }
     }
 }
@@ -185,10 +185,10 @@ body {
         background-color: nth($square-bg-color, $i);
     }
     .submenu.menu-item-#{$i} {
-        visibility: hidden;
+        opacity: 0;
     }
     .menu-item-#{$i}:hover .submenu.menu-item-#{$i} {
-        visibility: visible;
+        opacity: 1;
     }
     .menu-item-#{$i}:hover {
         background-color: nth($square-bg-color, $i);

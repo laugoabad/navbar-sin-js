@@ -25,7 +25,7 @@ body {
   box-shadow: 0rem 0rem 1rem grey;
   border-bottom: 1px solid #e6e6e6; }
   .navbar ul.menu-list {
-    visibility: hidden;
+    opacity: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -74,7 +74,7 @@ body {
             color: gray; }
 
 .menu-wrap {
-  visibility: visible;
+  opacity: 1;
   position: absolute;
   right: 10rem;
   display: flex;
@@ -98,9 +98,9 @@ body {
         transform: rotate(225deg);
         margin: 0;
         background: rgba(0, 0, 0, 0.4); }
-    .menu-wrap .toggler:checked > ul.menu-list {
-      visibility: visible; }
-      .menu-wrap .toggler:checked > ul.menu-list li {
+    .menu-wrap .toggler:checked ~ .navbar ul.menu-list {
+      opacity: 1; }
+      .menu-wrap .toggler:checked ~ .navbar ul.menu-list li {
         flex-direction: row; }
   .menu-wrap .hamburguer {
     position: absolute;
@@ -112,7 +112,7 @@ body {
     .menu-wrap .hamburguer .linea,
     .menu-wrap .hamburguer .linea:before,
     .menu-wrap .hamburguer .linea:after {
-      content: '';
+      content: "";
       position: absolute;
       width: 3rem;
       height: 0.3rem;
@@ -129,9 +129,9 @@ body {
 /*-----media querys-------------------------------------------------------------------------*/
 @media (min-width: 1200px) {
   .navbar .menu-wrap {
-    visibility: hidden; }
+    opacity: 0; }
   .navbar ul.menu-list {
-    visibility: visible; }
+    opacity: 1; }
     .navbar ul.menu-list li {
       position: relative;
       display: flex;
@@ -144,10 +144,10 @@ body {
   background-color: #70d3fb; }
 
 .submenu.menu-item-1 {
-  visibility: hidden; }
+  opacity: 0; }
 
 .menu-item-1:hover .submenu.menu-item-1 {
-  visibility: visible; }
+  opacity: 1; }
 
 .menu-item-1:hover {
   background-color: #70d3fb; }
@@ -160,10 +160,10 @@ body {
   background-color: #fede46; }
 
 .submenu.menu-item-2 {
-  visibility: hidden; }
+  opacity: 0; }
 
 .menu-item-2:hover .submenu.menu-item-2 {
-  visibility: visible; }
+  opacity: 1; }
 
 .menu-item-2:hover {
   background-color: #fede46; }
@@ -176,10 +176,10 @@ body {
   background-color: #ff717b; }
 
 .submenu.menu-item-3 {
-  visibility: hidden; }
+  opacity: 0; }
 
 .menu-item-3:hover .submenu.menu-item-3 {
-  visibility: visible; }
+  opacity: 1; }
 
 .menu-item-3:hover {
   background-color: #ff717b; }
@@ -192,10 +192,10 @@ body {
   background-color: #00dbd3; }
 
 .submenu.menu-item-4 {
-  visibility: hidden; }
+  opacity: 0; }
 
 .menu-item-4:hover .submenu.menu-item-4 {
-  visibility: visible; }
+  opacity: 1; }
 
 .menu-item-4:hover {
   background-color: #00dbd3; }
@@ -208,10 +208,10 @@ body {
   background-color: #c90214; }
 
 .submenu.menu-item-5 {
-  visibility: hidden; }
+  opacity: 0; }
 
 .menu-item-5:hover .submenu.menu-item-5 {
-  visibility: visible; }
+  opacity: 1; }
 
 .menu-item-5:hover {
   background-color: #c90214; }
@@ -224,10 +224,10 @@ body {
   background-color: #a003ae; }
 
 .submenu.menu-item-6 {
-  visibility: hidden; }
+  opacity: 0; }
 
 .menu-item-6:hover .submenu.menu-item-6 {
-  visibility: visible; }
+  opacity: 1; }
 
 .menu-item-6:hover {
   background-color: #a003ae; }
@@ -240,10 +240,10 @@ body {
   background-color: #dc6d00; }
 
 .submenu.menu-item-7 {
-  visibility: hidden; }
+  opacity: 0; }
 
 .menu-item-7:hover .submenu.menu-item-7 {
-  visibility: visible; }
+  opacity: 1; }
 
 .menu-item-7:hover {
   background-color: #dc6d00; }
@@ -256,10 +256,10 @@ body {
   background-color: #57a200; }
 
 .submenu.menu-item-8 {
-  visibility: hidden; }
+  opacity: 0; }
 
 .menu-item-8:hover .submenu.menu-item-8 {
-  visibility: visible; }
+  opacity: 1; }
 
 .menu-item-8:hover {
   background-color: #57a200; }
