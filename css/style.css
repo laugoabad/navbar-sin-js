@@ -118,7 +118,7 @@ body {
         .menu-wrap ul.menu-list li .submenu .submenu-der,
         .menu-wrap ul.menu-list li .submenu .submenu-izq {
           width: 120rem;
-          height: 35rem;
+          height: 120rem;
           float: left; }
         .menu-wrap ul.menu-list li .submenu .submenu-der {
           border: 1px solid #e6e6e6;
