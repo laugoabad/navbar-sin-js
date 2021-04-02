@@ -37,14 +37,29 @@ body {
       .menu-wrap .toggler:checked + .hamburguer .linea:before {
         transform: rotate(135deg);
         margin: 0;
-        background: rgba(0, 0, 0, 0.4); }
+        background: rgba(0, 0, 0, 0.3); }
       .menu-wrap .toggler:checked + .hamburguer .linea:after {
         transform: rotate(225deg);
         margin: 0;
         background: rgba(0, 0, 0, 0.4); }
     .menu-wrap .toggler:checked ~ ul.menu-list {
+      position: absolute;
+      top: 8rem;
+      left: 0;
+      padding-left: 3rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
       opacity: 1;
-      flex-direction: column; }
+      width: 100%; }
+      .menu-wrap .toggler:checked ~ ul.menu-list li {
+        display: flex;
+        flex-direction: row;
+        border-right: none; }
+        .menu-wrap .toggler:checked ~ ul.menu-list li .menu-text {
+          margin-left: 5rem; }
+        .menu-wrap .toggler:checked ~ ul.menu-list li:first-child {
+          border-left: none; }
   .menu-wrap .hamburguer {
     position: absolute;
     z-index: 1;
@@ -74,7 +89,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    list-style-type: none; }
+    list-style-type: none;
+    background-color: white; }
     .menu-wrap ul.menu-list li {
       position: relative;
       display: flex;
@@ -87,15 +103,13 @@ body {
         border-left: 1px solid #e6e6e6; }
       .menu-wrap ul.menu-list li .menu-text {
         font-size: 1.4rem;
-        color: gray;
-        margin-bottom: 0.5rem; }
+        color: gray; }
       .menu-wrap ul.menu-list li .square {
-        margin: 2rem 0rem 1.8rem 0rem;
-        width: 2rem;
-        height: 1.8rem; }
+        margin: 1.3rem 0rem 1.3rem 0rem;
+        width: 1.6rem;
+        height: 1.5rem; }
       .menu-wrap ul.menu-list li .submenu {
         position: absolute;
-        display: flex;
         top: 0rem;
         margin: 0 auto;
         z-index: -100;
@@ -104,7 +118,8 @@ body {
         .menu-wrap ul.menu-list li .submenu .submenu-der,
         .menu-wrap ul.menu-list li .submenu .submenu-izq {
           width: 60rem;
-          height: 35rem; }
+          height: 35rem;
+          float: left; }
           .menu-wrap ul.menu-list li .submenu .submenu-der .link,
           .menu-wrap ul.menu-list li .submenu .submenu-izq .link {
             font-size: 1.4rem;
@@ -132,16 +147,22 @@ body {
       justify-content: center;
       align-items: center;
       padding: 0rem 1.2rem;
-      border-right: 1px solid #e6e6e6; } }
+      border-right: 1px solid #e6e6e6; }
+      .menu-wrap ul.menu-list li .square {
+        margin: 2rem 0rem 1.8rem 0rem;
+        width: 1.6rem;
+        height: 1.5rem; }
+      .menu-wrap ul.menu-list li .menu-text {
+        margin-bottom: 1rem; } }
 
 .square-1 {
   background-color: #70d3fb; }
 
 .submenu.menu-item-1 {
-  opacity: 0; }
+  visibility: hidden; }
 
 .menu-item-1:hover .submenu.menu-item-1 {
-  opacity: 1; }
+  visibility: visible; }
 
 .menu-item-1:hover {
   background-color: #70d3fb; }
@@ -154,10 +175,10 @@ body {
   background-color: #fede46; }
 
 .submenu.menu-item-2 {
-  opacity: 0; }
+  visibility: hidden; }
 
 .menu-item-2:hover .submenu.menu-item-2 {
-  opacity: 1; }
+  visibility: visible; }
 
 .menu-item-2:hover {
   background-color: #fede46; }
@@ -170,10 +191,10 @@ body {
   background-color: #ff717b; }
 
 .submenu.menu-item-3 {
-  opacity: 0; }
+  visibility: hidden; }
 
 .menu-item-3:hover .submenu.menu-item-3 {
-  opacity: 1; }
+  visibility: visible; }
 
 .menu-item-3:hover {
   background-color: #ff717b; }
@@ -186,10 +207,10 @@ body {
   background-color: #00dbd3; }
 
 .submenu.menu-item-4 {
-  opacity: 0; }
+  visibility: hidden; }
 
 .menu-item-4:hover .submenu.menu-item-4 {
-  opacity: 1; }
+  visibility: visible; }
 
 .menu-item-4:hover {
   background-color: #00dbd3; }
@@ -202,10 +223,10 @@ body {
   background-color: #c90214; }
 
 .submenu.menu-item-5 {
-  opacity: 0; }
+  visibility: hidden; }
 
 .menu-item-5:hover .submenu.menu-item-5 {
-  opacity: 1; }
+  visibility: visible; }
 
 .menu-item-5:hover {
   background-color: #c90214; }
@@ -218,10 +239,10 @@ body {
   background-color: #a003ae; }
 
 .submenu.menu-item-6 {
-  opacity: 0; }
+  visibility: hidden; }
 
 .menu-item-6:hover .submenu.menu-item-6 {
-  opacity: 1; }
+  visibility: visible; }
 
 .menu-item-6:hover {
   background-color: #a003ae; }
@@ -234,10 +255,10 @@ body {
   background-color: #dc6d00; }
 
 .submenu.menu-item-7 {
-  opacity: 0; }
+  visibility: hidden; }
 
 .menu-item-7:hover .submenu.menu-item-7 {
-  opacity: 1; }
+  visibility: visible; }
 
 .menu-item-7:hover {
   background-color: #dc6d00; }
@@ -250,10 +271,10 @@ body {
   background-color: #57a200; }
 
 .submenu.menu-item-8 {
-  opacity: 0; }
+  visibility: hidden; }
 
 .menu-item-8:hover .submenu.menu-item-8 {
-  opacity: 1; }
+  visibility: visible; }
 
 .menu-item-8:hover {
   background-color: #57a200; }
