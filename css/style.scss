@@ -30,14 +30,17 @@ body {
     background-color: white;
     box-shadow: 0rem 0rem 1rem grey;
     border-bottom: 1px solid #e6e6e6;
-    .toggler {
-        opacity: 0;
+    .toggler,
+    .hamburguer {
         position: absolute;
-        z-index: 2;
-        cursor: pointer;
         width: 5rem;
         height: 5rem;
-        right: 10rem;
+        right: 5rem;
+    }
+    .toggler {
+        opacity: 0;
+        z-index: 2;
+        cursor: pointer;
         &:checked + .hamburguer .linea {
             background: rgba(0, 0, 0, 0);
             &:before {
@@ -75,13 +78,9 @@ body {
         }
     }
     .hamburguer {
-        position: absolute;
         z-index: 1;
-        width: 5rem;
-        height: 5rem;
         display: flex;
         align-items: center;
-        right: 10rem;
         .linea,
         .linea:before,
         .linea:after {
@@ -105,6 +104,7 @@ body {
     }
 
     ul.menu-list {
+        position: relative;
         opacity: 0;
         display: flex;
         justify-content: center;
@@ -115,9 +115,10 @@ body {
             position: relative;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: left;
+            width: 100%;
             align-items: center;
-            padding: 0rem 1.2rem;
+            padding: 1rem 1.2rem;
             border-right: 1px solid #e6e6e6;
             &:first-child {
                 border-left: 1px solid #e6e6e6;
@@ -125,7 +126,6 @@ body {
             .menu-text {
                 font-size: 1.4rem;
                 color: gray;
-                
             }
             .square {
                 margin: 1.3rem 0rem 1.3rem 0rem;
@@ -133,12 +133,14 @@ body {
                 height: 1.5rem;
             }
             .submenu {
+                display: flex;
                 position: absolute;
-                top: 0rem;
-                margin: 0 auto;
-                z-index: -100;
-                padding: 9rem 1rem 1rem 1rem;
+                top: 0;
+                left: 5rem;
+                z-index: 3;
+                margin-top: 8rem;
                 background-color: white;
+                padding: 0 1rem 1rem 0;
                 .submenu-der,
                 .submenu-izq {
                     width: 60rem;
@@ -150,9 +152,9 @@ body {
                         padding: 1.2rem;
                     }
                 }
-                .submenu-izq {
+                .submenu-der {
                     border: 1px solid #e6e6e6;
-                    height: 35rem;
+                    display: none;
                     .text-ad {
                         font-size: 1.5rem;
                         padding: 1.5rem;
@@ -163,7 +165,6 @@ body {
         }
     }
 }
-
 
 /*-----media querys-------------------------------------------------------------------------*/
 @media (min-width: 1200px) {
@@ -182,14 +183,21 @@ body {
                 align-items: center;
                 padding: 0rem 1.2rem;
                 border-right: 1px solid #e6e6e6;
+                width: auto;
                 .square {
-                margin: 2rem 0rem 1.8rem 0rem;
-                width: 1.6rem;
-                height: 1.5rem;
-            }
-            .menu-text {
-                margin-bottom: 1rem;
-            }
+                    margin: 2rem 0rem 1.8rem 0rem;
+                    width: 1.6rem;
+                    height: 1.5rem;
+                }
+                .menu-text {
+                    margin-bottom: 1rem;
+                }
+                .submenu .submenu-der {
+                    display: block;
+                }
+                .submenu {
+                    left: -23.7rem;
+                }
             }
         }
     }
