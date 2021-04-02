@@ -112,10 +112,8 @@ body {
         list-style-type: none;
         background-color: white;
         li {
-            position: relative;
             display: flex;
             flex-direction: column;
-            justify-content: left;
             width: 100%;
             align-items: center;
             padding: 1rem 1.2rem;
@@ -136,21 +134,16 @@ body {
                 display: flex;
                 position: absolute;
                 top: 0;
-                left: 5rem;
+                left: 8rem;
                 z-index: 3;
-                margin-top: 8rem;
+                margin-top: 0rem;
                 background-color: white;
                 padding: 0 1rem 1rem 0;
                 .submenu-der,
                 .submenu-izq {
-                    width: 60rem;
+                    width: 120rem;
                     height: 35rem;
                     float: left;
-                    .link {
-                        font-size: 1.4rem;
-                        color: gray;
-                        padding: 1.2rem;
-                    }
                 }
                 .submenu-der {
                     border: 1px solid #e6e6e6;
@@ -159,6 +152,13 @@ body {
                         font-size: 1.5rem;
                         padding: 1.5rem;
                         color: gray;
+                    }
+                }
+                .submenu-izq {
+                    li.link {
+                        font-size: 1.4rem;
+                        color: gray;
+                        padding: 1.5rem;
                     }
                 }
             }
@@ -176,7 +176,6 @@ body {
         ul.menu-list {
             opacity: 1;
             li {
-                position: relative;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -192,15 +191,28 @@ body {
                 .menu-text {
                     margin-bottom: 1rem;
                 }
-                .submenu .submenu-der {
-                    display: block;
-                }
+
                 .submenu {
-                    left: -23.7rem;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-top: 8.2rem;
+                    .submenu-izq {
+                        width: 60rem;
+                    }
+                    .submenu-der {
+                        display: block;
+                    }
                 }
             }
         }
     }
+
+    // .menu-wrap ul.menu-list li {
+    //     display: block;
+    // }
 }
 
 @for $i from 1 to length($square-bg-color) + 1 {
