@@ -142,7 +142,7 @@ body {
                 .submenu-der,
                 .submenu-izq {
                     width: 120rem;
-                    height: 120rem;
+                    height: 46rem;
                     float: left;
                 }
                 .submenu-der {
@@ -209,10 +209,6 @@ body {
             }
         }
     }
-
-    // .menu-wrap ul.menu-list li {
-    //     display: block;
-    // }
 }
 
 @for $i from 1 to length($square-bg-color) + 1 {
