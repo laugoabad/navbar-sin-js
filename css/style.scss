@@ -104,7 +104,6 @@ body {
     }
 
     ul.menu-list {
-        position: relative;
         opacity: 0;
         display: flex;
         justify-content: center;
@@ -194,15 +193,14 @@ body {
 
                 .submenu {
                     position: absolute;
-                    left: 0;
-                    right: 0;
                     margin-left: auto;
                     margin-right: auto;
-                    margin-top: 8.2rem;
+                    margin-top: 8.1rem;
                     .submenu-izq {
                         width: 60rem;
                     }
                     .submenu-der {
+                        width: 60rem;
                         display: block;
                     }
                 }

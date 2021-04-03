@@ -83,7 +83,6 @@ body {
       background-color: #57a200;
       margin-top: 1rem; }
   .menu-wrap ul.menu-list {
-    position: relative;
     opacity: 0;
     display: flex;
     justify-content: center;
@@ -155,14 +154,13 @@ body {
         margin-bottom: 1rem; }
       .menu-wrap ul.menu-list li .submenu {
         position: absolute;
-        left: 0;
-        right: 0;
         margin-left: auto;
         margin-right: auto;
-        margin-top: 8.2rem; }
+        margin-top: 8.1rem; }
         .menu-wrap ul.menu-list li .submenu .submenu-izq {
           width: 60rem; }
         .menu-wrap ul.menu-list li .submenu .submenu-der {
+          width: 60rem;
           display: block; } }
 
 .square-1 {
